@@ -1,0 +1,124 @@
+main .hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+main .hero .background-image img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+main .hero .hero-content {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 330px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, .5);
+    border-left: 3px solid #E55606;
+    border-bottom: 3px solid #E55606;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .hero .hero-content h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+main .hero .hero-content h3 {
+    font-size: 1em;
+}
+main .hero .hero-content span {
+    font-size: 1em;
+}
+
+/*
+================ HEADER TAB:
+*/
+@media screen and (min-width: 768px) {
+    
+}
+
+/*
+================ HEADER DESKTOP:
+*/
+@media screen and (min-width: 1000px) {
+    main .hero {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 120px);
+        display: flex;
+    }
+    
+    main .hero .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .hero .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);
+    }
+    
+    main .hero .background-image img {
+        flex: 1;
+        width: 100%;
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    main .hero .hero-content {
+        position: absolute;
+        z-index: 2;
+        top: 260px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, .6);
+        border-left: 3px solid #E55606;
+        border-bottom: 3px solid #E55606;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main .hero .hero-content h2 {
+        font-size: 3em;
+        text-transform: uppercase;
+    }
+    main .hero .hero-content h3 {
+        font-size: 2em;
+    }
+    main .hero .hero-content span {
+        font-size: 1.8em;
+    }
+}
