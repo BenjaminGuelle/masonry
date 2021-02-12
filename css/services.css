@@ -1,7 +1,7 @@
 main .services {
     position: relative;
     width: 100%;
-    min-height: 75vh;
+    min-height: 100%;
     background-color: #FAFAFA;
 }
 
@@ -30,7 +30,7 @@ main .services h2 {
 }
 
 main .services .service-card {
-    /* background-color: aquamarine; */
+    position: relative;
     width: 90%;
     height: 400px;
     display: flex;
@@ -39,15 +39,12 @@ main .services .service-card {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    filter: grayscale(1);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
 }
 
 main .services .service-card:hover {
-    filter: grayscale(0);
-    transition: all 0.5s ease-in-out;
 }
 
 /*
@@ -67,6 +64,13 @@ main .services .service-card .service-img img {
     display: block;
     width: 100%;
     object-fit: center;
+    filter: grayscale(1);
+    transition: all 0.2s ease-in-out;
+}
+
+main .services .service-card:hover .service-img img {
+    filter: grayscale(0);
+    transition: all 0.2s ease-in-out;
 }
 
 
@@ -85,6 +89,33 @@ main .services .service-card .service-content h3 {
     font-size: 1.8em;
 }
 
+/* BTN bottom card => "en savoir plus"  */
+main .services .service-card .btn-card {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #E55606;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2px;
+}
+
+main .services .service-card .btn-card::after {
+    position: absolute;
+    content: "";
+    top: 23px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    margin: 0 auto;
+    background-color: #E55606;
+}
+
+main .services .service-card .btn-card:hover::after {
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+}
+
 /*
 ================ HEADER TAB:
 */
@@ -99,13 +130,14 @@ main .services .service-card .service-content h3 {
     main .services {
         position: relative;
         width: 100%;
-        height: 75vh;
         background-color: #FAFAFA;
     }
     
     main .services .services-content {
         max-width: 100%;
-        margin: 150px auto;
+        margin: 0 auto;
+        padding-top: 150px;
+        padding-bottom: 100px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -128,24 +160,21 @@ main .services .service-card .service-content h3 {
     }
     
     main .services .service-card {
+        position: relative;
         width: 300px;
-        height: 400px;
+        height: 500px;
         display: flex;
         margin: 0 auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border-radius: 5px;
-        filter: grayscale(1);
         box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
         transition: all 0.5s ease-in-out;
         cursor: pointer;
     }
     
-    main .services .service-card:hover {
-        filter: grayscale(0);
-        transition: all 0.5s ease-in-out;
-    }
+    main .services .service-card:hover {}
     
     /*
     ================= Service card
@@ -156,7 +185,6 @@ main .services .service-card .service-content h3 {
         border-bottom: 2px solid #E55606;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
-        
         overflow: hidden;
     }
     
@@ -181,10 +209,53 @@ main .services .service-card .service-content h3 {
         padding: 10px 0px;
         font-size: 1.8em;
     }
+
+    main .services .service-card .btn-card {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: #E55606;
+        font-weight: 700;
+    }
+
+    main .services .service-card .btn-card::after {
+        position: absolute;
+        content: "";
+        top: 23px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        margin: 0 auto;
+        background-color: #E55606;
+    }
+
+    main .services .service-card .btn-card:hover::after {
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+    }
 }
 
 @media screen and (min-width: 1500px) {  
     main .services .services-content {
         max-width: 60%;
+        flex-direction: row;
+    }
+
+    main .services .service-card {
+        width: calc(100% / 3);
+        margin: 0 20px;
+    }
+    
+    main .services .service-card .service-content h3 {
+        padding: 10px 0px;
+        font-size: 1.8em;
+    }
+
+    main .services .service-card.active {
+        width: 100%;
+    }
+
+    main .services .service-card.notActive {
+        display: none;
     }
 }

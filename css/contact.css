@@ -5,20 +5,21 @@ main .contact {
 
 main .contact .contact-title {
     width: 100%;
-    height: 250px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 main .contact .contact-title h2 {
-    font-size: 2.5em;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 main .contact .contact-informations {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    height: 500px;
+    height: auto;
     padding: 30px;
     background-color: #FAFAFA;
     box-shadow: inset 0 0 6px 0px black;
@@ -27,13 +28,13 @@ main .contact .contact-informations {
 main .contact .contact-informations h3 {
     text-transform: uppercase;
     display: initial;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding-bottom: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #E55606;
 }
 
 main .contact .contact-informations p {
-    font-size: 1em;
+    font-size: 0.8em;
     margin-top: 50px;
 }
 
@@ -41,19 +42,23 @@ main .contact .contact-informations .fastinfos {
     width: 100%;
     height: 50px;
     display: flex;
+    flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 80px;
 }
 
 main .contact .contact-informations .fastinfos .fastinfos-item {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
+    padding-bottom: 10px;
+    
 }
 
 main .contact .contact-informations .fastinfos .fastinfos-item .info-logo {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E55606;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -65,7 +70,138 @@ main .contact .contact-informations .fastinfos .fastinfos-item .info-logo img {
 }
 
 main .contact .contact-informations .fastinfos .fastinfos-item .info-txt {
+    font-size: 0.8em;
     display: flex;
     align-items: center;
     padding-left: 15px;
+}
+
+main .contact .contact-informations form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .contact .contact-informations form .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .contact .contact-informations form .form-group label, input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+main .contact .contact-informations form .form-group input {
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #E55606;
+    font-size: 1.3em;
+    padding-left: 10px;
+}
+
+main .contact .contact-informations form .form-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .contact .contact-informations form .form-description label {
+    height: 40px;
+}
+
+main .contact .contact-informations form .form-description input {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-bottom: 2px solid #E55606;
+    outline: none;
+    padding-left: 10px;
+    
+}
+
+main .contact .contact-informations form .form-description button {
+    width: 100px;
+    height: 50px;
+    background-color: #E55606;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+main .contact .contact-informations form .form-description button:hover {
+
+}
+
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1000px) {}
+
+@media screen and (min-width: 1500px) {
+    
+    main .contact .contact-title {
+        height: 250px;
+    }
+    
+    main .contact .contact-title h2 {
+        font-size: 2.5em;
+    }
+    
+    main .contact .contact-informations {
+        width: 80%;
+    }
+    
+    main .contact .contact-informations h3 {
+        font-size: 1.5em;
+    }
+    
+    main .contact .contact-informations p {
+        font-size: 1em;
+    }
+    
+    main .contact .contact-informations .fastinfos {
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+    
+    main .contact .contact-informations .fastinfos .fastinfos-item {
+        width: 50%; 
+    }
+    
+    main .contact .contact-informations .fastinfos .fastinfos-item .info-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    main .contact .contact-informations .fastinfos .fastinfos-item .info-txt {
+        font-size: 1em;
+    }
+    
+    main .contact .contact-informations form {
+        flex-direction: row;
+    }
+    
+    main .contact .contact-informations form .form-group {
+        width: 50%;
+    }
+    
+    main .contact .contact-informations form .form-group label, input {
+        width: 50%;
+    }
+    
+    main .contact .contact-informations form .form-description {
+        width: 50%;
+    }
+    
+    main .contact .contact-informations form .form-description input {
+        width: 80%;
+    }
+    
+    main .contact .contact-informations form .form-description button:hover {
+    
+    }
 }

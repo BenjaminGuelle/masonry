@@ -80,7 +80,7 @@ header .navbar .links a {
 
 header .navbar .btn-contact {
     position: absolute;
-    right: 60px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     width: 80px;
@@ -90,6 +90,41 @@ header .navbar .btn-contact {
     border: none;
     cursor: pointer;
     outline: none;
+    display: none;
+}
+
+/*
+************* tel fast :
+*/
+header .navbar .fast-tel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 200px;
+    width: 220px;
+    display: flex;
+    display: none;
+}
+
+header .navbar .fast-tel .tel-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #E55606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar .fast-tel .tel-logo img {
+    width: 60%;
+}
+
+header .navbar .fast-tel .tel-number {
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 /*
@@ -97,44 +132,57 @@ header .navbar .btn-contact {
 */
 header .navbar .btn-toggle {
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 50px;
+    background-color: #E55606;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
     display: flex;
     justify-content: center;
-    align-items: center
-}
-
-header .navbar .btn-toggle .line-toggle { 
-    width: 30px;
-    height: 2px;
-    background-color: #E55606;
-    transition: all 0.5s ease-in-out;
-}
-
-header .navbar .btn-toggle .line-toggle::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2px;
-    height: 30px;
-    background-color: #E55606;
-}
-/* animation menu burger */
-header .navbar .line-toggle.active {
-    transition: all 0.5s ease-in-out;
-    transform: rotate(45deg);
+    align-items: center;
 }
 
 /*
-================ HEADER TAB:
+************ MENU MOB BOTTOM ****************
 */
+header .menu-mob-bottom {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #FAFAFA;
+    box-shadow: -1px 1px 20px 0px #a3a3a3;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .menu-mob-bottom .item-mob {
+    width: 50px;
+    height: 50px;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu-mob-bottom .item-mob img {
+    width: 60%;
+}
+
+header .menu-mob-bottom .item-mob img:hover {
+    transform: scale(1.2);
+}
+
 @media screen and (min-width: 768px) {
-    
+    header .menu-mob-bottom {
+        display: none;
+    }
 }
 
 /*
@@ -192,7 +240,7 @@ header .navbar .line-toggle.active {
     
     header .navbar .btn-contact {
         position: absolute;
-        right: 100px;
+        right: 50px;
         top: 50%;
         transform: translateY(-50%);
         width: 100px;
@@ -203,6 +251,7 @@ header .navbar .line-toggle.active {
         border: none;
         cursor: pointer;
         filter: contrast(0.9);
+        display: inline-block;
     }
 
     header .navbar .btn-contact:hover {
@@ -211,5 +260,9 @@ header .navbar .line-toggle.active {
 
     header .navbar .btn-toggle {
         display: none;
+    }
+
+    header .navbar .fast-tel {
+        display: inline-flex;
     }
 }

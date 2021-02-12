@@ -31,8 +31,9 @@
                 <img src="./images/logo.png" alt="logo-maçonnerie">
             </div>
             <div class="btn-toggle">
-                <div class="line-toggle">
-                </div>
+                MENU
+                <!-- <div class="line-toggle">
+                </div> -->
             </div>
             <div class="links">
                 <a href="#">Accueil</a>
@@ -40,10 +41,29 @@
                 <a href="#">A propos</a>
                 <a href="#">Gallerie</a>
             </div>
+            <div class="fast-tel">
+                <div class="tel-logo">
+                    <img src="./images/contact/tel.png" alt="logo-tel">
+                </div>
+                <span class="tel-number">
+                    (+33)06 41 79 66 65
+                </span>
+            </div> 
             <button type="button" class="btn-contact">
                 CONTACT
             </button>
         </nav>
+        <div class="menu-mob-bottom">
+            <div class="item-mob">
+                <img src="./images/contact/home.png" alt="accueil">
+            </div>
+            <div class="item-mob">
+                <img src="./images/contact/tel.png" alt="tel">
+            </div>
+            <div class="item-mob">
+                <img src="./images/contact/letter.png" alt="contact">
+            </div>
+        </div>
     </header>
 
     <!-- Main -->
@@ -67,7 +87,7 @@
                 <h2>Constructions, rénovations, tous travaux de maçconnerie en basse-normandie, nous sommes à votre écoute pour étudier chacuns de vos projets.</h2>
             </div>
             <div class="services-content">
-                <div class="service-card">
+                <div class="service-card card1">
                     <div class="service-img">
                         <img src="./images/img-services/photo1.jpg" alt="construction">
                     </div>
@@ -81,9 +101,12 @@
                             <li>Murs</li>
                         </ul>
                     </div>
+                    <span class="btn-card">
+                        En savoir plus ?
+                    </span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card card2">
                     <div class="service-img">
                         <img src="./images/img-services/photo2.jpg" alt="Rénovation">
                     </div>
@@ -97,9 +120,12 @@
                             <li>Murs</li>
                         </ul>
                     </div>
+                    <span class="btn-card">
+                        En savoir plus ?
+                    </span>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card card3">
                     <div class="service-img">
                         <img src="./images/img-services/photo3.jpg" alt="travaux">
                     </div>
@@ -113,6 +139,9 @@
                             <li>Murs</li>
                         </ul>
                     </div>
+                    <span class="btn-card">
+                        En savoir plus ?
+                    </span>
                 </div>
             </div>
         </section>
@@ -223,12 +252,34 @@
                             <img src="./images/contact/tel.png" alt="logo-tel">
                         </div>
                         <span class="info-txt">
-                            06 41 79 66 65
+                            (+33)06 41 79 66 65
                         </span>
                     </div> 
                 </div>
+                <h3>Demande de devis</h3>
+                <form action="post">
+                    <div class="form-group">
+                        <label for="">Votre nom :</label>
+                        <input type="text">
+
+                        <label for="">Votre prénom :</label>
+                        <input type="text">
+
+                        <label for="">Votre email :</label>
+                        <input type="email">
+                        
+                        <label for="">Votre numéro de téléphone :</label>
+                        <input type="number">
+                    </div>
+                    <div class="form-description">
+                        <label for="">Votre message</label>
+                        <input type="text">
+
+                        <button type="button">Envoyer</button>
+                        
+                    </div>
+                </form>
             </div>
-            <div class="contact-form"></div>
         </section>
 
     </main>
