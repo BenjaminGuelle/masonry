@@ -29,28 +29,68 @@ for ( let i = 0; i < moreInfo.length; i++) {
 function handleDisplayService(evt) {
     evt.preventDefault();
     const currentCard = evt.currentTarget.parentNode;
-    console.log('CLICK', currentCard);
+    const currentItem = evt.currentTarget;
+    console.log('CLICK', currentItem);
 
     const card1 = document.querySelector('.card1');
     const card2 = document.querySelector('.card2');
     const card3 = document.querySelector('.card3');
 
-    if ( currentCard.classList.contains('card1') ) {
-        card1.classList.add('active');
-        card2.classList.add('notActive');
-        card3.classList.add('notActive');
-    }
+    const left = document.querySelector('.left-card');
+    const right = document.querySelector('.right-card');
 
-    else if ( currentCard.classList.contains('card2') ) {
-        card2.classList.add('active');
-        card1.classList.add('notActive');
-        card3.classList.add('notActive');
+    function txtBtn(currentItem) 
+    {
+        if ( currentItem.innerText === 'En savoir plus ?') {
+            currentItem.innerHTML = '&larr; Retour';
+        }
+        else {
+            currentItem.innerHTML = 'En savoir plus ?';
+        }
     }
+    txtBtn(currentItem);
+
+    if ( currentCard.classList.contains('upperCard') || currentCard.classList.contains('downCard') ) {
+        card1.classList.remove('upperCard', 'downCard', 'hardCard');
+        card1.style.removeProperty('width');
+
+        card2.classList.remove('upperCard', 'downCard', 'hardCard');
+        card2.style.removeProperty('width');
+
+        card3.classList.remove('upperCard', 'downCard', 'hardCard');
+        card3.style.removeProperty('width');
+
+        right.classList.remove('hardCard');
+        left.classList.remove('hardCard');
+    }
+    else {
+        if ( currentCard.classList.contains('card1') ) {
+            card1.classList.add('upperCard', 'hardCard');
+            left.classList.add('hardCard');
+            right.classList.add('hardCard');
+            
+
+            card2.classList.add('downCard');
+            card3.classList.add('downCard'); 
+        }
     
-    else if ( currentCard.classList.contains('card3') ) {
-        card3.classList.add('active');
-        card2.classList.add('notActive');
-        card1.classList.add('notActive');
+        else if ( currentCard.classList.contains('card2') ) {
+            card2.classList.add('upperCard', 'hardCard');
+            left.classList.add('hardCard');
+            right.classList.add('hardCard');
+
+            card1.classList.add('downCard');
+            card3.classList.add('downCard');
+        }
+        
+        else if ( currentCard.classList.contains('card3') ) {
+            card3.classList.add('upperCard', 'hardCard');
+            left.classList.add('hardCard');
+            right.classList.add('hardCard');
+
+            card1.classList.add('downCard');
+            card2.classList.add('downCard');
+        }
     }
 
 }

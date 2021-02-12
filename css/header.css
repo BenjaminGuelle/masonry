@@ -76,6 +76,7 @@ header .navbar .links a {
     text-transform: uppercase;
     font-size: 0.6em;
     font-weight: 400;
+    cursor: pointer;
 }
 
 header .navbar .btn-contact {
@@ -104,6 +105,12 @@ header .navbar .fast-tel {
     width: 220px;
     display: flex;
     display: none;
+    color: black;
+    cursor: pointer;
+}
+
+header .navbar .fast-tel:hover {
+    color: #E55606;
 }
 
 header .navbar .fast-tel .tel-logo {

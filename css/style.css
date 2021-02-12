@@ -32,3 +32,7 @@ body footer {
     background-color: #3C3D3D;
     color: #E55606;
 }
+
+a {
+    all: unset;
+}
