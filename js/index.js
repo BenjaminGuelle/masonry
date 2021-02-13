@@ -17,20 +17,20 @@ function handletogglerMenu() {
     }
 };
 
-const moreInfo = document.querySelectorAll('.btn-card');
-console.log(moreInfo);
+const srvCard = document.querySelectorAll('.btn_srv-card');
+console.log(srvCard);
 
-for ( let i = 0; i < moreInfo.length; i++) {
-    moreInfo[i].addEventListener('click', (evt) => {
+for ( let i = 0; i < srvCard.length; i++) {
+    srvCard[i].addEventListener('click', (evt) => {
         handleDisplayService(evt), false;
     });
 }
 
 function handleDisplayService(evt) {
     evt.preventDefault();
-    const currentCard = evt.currentTarget.parentNode;
+    const currentCard = evt.currentTarget.parentNode.parentNode;
     const currentItem = evt.currentTarget;
-    console.log('CLICK', currentItem);
+    console.log('CLICK', currentCard);
 
     const card1 = document.querySelector('.card1');
     const card2 = document.querySelector('.card2');
@@ -42,54 +42,51 @@ function handleDisplayService(evt) {
     function txtBtn(currentItem) 
     {
         if ( currentItem.innerText === 'En savoir plus ?') {
-            currentItem.innerHTML = '&larr; Retour';
+            currentItem.innerHTML = '<strong>&larr; Retour</strong>';
         }
         else {
-            currentItem.innerHTML = 'En savoir plus ?';
+            currentItem.innerHTML = '<strong>En savoir plus ?</strong>';
         }
     }
     txtBtn(currentItem);
+    console.log('CURRENT', currentCard.classList.contains('onSlide') );
 
-    if ( currentCard.classList.contains('upperCard') || currentCard.classList.contains('downCard') ) {
-        card1.classList.remove('upperCard', 'downCard', 'hardCard');
-        card1.style.removeProperty('width');
+    if ( currentCard.classList.contains('onSlide') || currentCard.classList.contains('downCard') ) {
+        card1.classList.remove('onSlide', 'downCard', 'actived');
 
-        card2.classList.remove('upperCard', 'downCard', 'hardCard');
-        card2.style.removeProperty('width');
+        card2.classList.remove('onSlide', 'downCard', 'actived');
 
-        card3.classList.remove('upperCard', 'downCard', 'hardCard');
-        card3.style.removeProperty('width');
-
-        right.classList.remove('hardCard');
-        left.classList.remove('hardCard');
+        card3.classList.remove('onSlide', 'downCard', 'actived');
     }
     else {
         if ( currentCard.classList.contains('card1') ) {
-            card1.classList.add('upperCard', 'hardCard');
-            left.classList.add('hardCard');
-            right.classList.add('hardCard');
-            
+            card1.classList.add('actived');
+            setTimeout( () => {
+                card1.classList.add('downCard');
+            }, 800);
 
-            card2.classList.add('downCard');
-            card3.classList.add('downCard'); 
+            card2.classList.add('onSlide');
+            card3.classList.add('onSlide');
         }
     
         else if ( currentCard.classList.contains('card2') ) {
-            card2.classList.add('upperCard', 'hardCard');
-            left.classList.add('hardCard');
-            right.classList.add('hardCard');
+            card2.classList.add('actived');
+            setTimeout( () => {
+                card2.classList.add('downCard');
+            }, 800);
 
-            card1.classList.add('downCard');
-            card3.classList.add('downCard');
+            card1.classList.add('onSlide');
+            card3.classList.add('onSlide');
         }
         
         else if ( currentCard.classList.contains('card3') ) {
-            card3.classList.add('upperCard', 'hardCard');
-            left.classList.add('hardCard');
-            right.classList.add('hardCard');
+            card3.classList.add('actived');
+            setTimeout( () => {
+                card3.classList.add('downCard');
+            }, 800);
 
-            card1.classList.add('downCard');
-            card2.classList.add('downCard');
+            card1.classList.add('onSlide');
+            card2.classList.add('onSlide');
         }
     }
 
