@@ -33,8 +33,10 @@ main .about .about-container {
     height: 600px;
     margin: 0 auto;
     margin-top: 50px;
-    background-color: aquamarine;
+    background-color: #FAFAFA;
     overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* about SLIDER */
@@ -57,7 +59,8 @@ main .about .about-container .about-slide.onSlide {
 /* about IMAGE */
 main .about .about-container .about-slide .about-img {
     width: 100%;
-    height: 40%;
+    height: 100%;
+    border-bottom: 2px solid #E55606;
     overflow: hidden;
 }
 
@@ -69,18 +72,35 @@ main .about .about-container .about-slide .about-img img {
 main .about .about-container .about-slide .about-content {
     width: 100%;
     height: 60%;
-    background-color: aqua;
+    background-color: #FAFAFA;
 }
 
 /* about CONTENT => TOP */
 main .about .about-container .about-slide .about-content .top-content {
     width: 100%;
     height: 360px;
-    background-color: red;
+    background-color: #FAFAFA;
+}
+
+main .about .about-container .about-slide .about-content .top-content h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+main .about .about-container .about-slide .about-content .top-content p {
+    font-size: 1em;
+    padding: 0 10px;
 }
 
 main .about .about-container .about-slide .about-content .top-content span {
-    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #E55606;
+    outline: none;
     cursor: pointer;
 }
 
@@ -88,119 +108,20 @@ main .about .about-container .about-slide .about-content .top-content span {
 main .about .about-container .about-slide .about-content .bot-content {
     width: 100%;
     height: 300px;
-    background-color: blue;
-}
-
-@media screen and (min-width: 768px) {
-    main .about .top-transition h2 {
-        font-size: 2.5em;
-        width: 415px;
-    }
-}
-
-@media screen and (min-width: 1024px) {}
-
-@media screen and (min-width: 1440px) {
-    main .about .top-transition h2 {
-        bottom: 10px;
-        width: 500px;
-        font-size: 3em;
-    }
-}
-/* main .about {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main .about .backimg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 15%;
-    background-image: url("../images//imgAbout.svg");
-    background-position: bottom;
-    background-size: cover;
-}
-
-main .about .transition {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em;
-    text-align: center;
-    color: #E55606;
-}
-
-main .about .about-container {
-    width: 90%;
-    min-height: 500px;
-    border-radius: 5px;
-    margin-top: 200px;
-}
-
-main .about .about-content {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
     background-color: #FAFAFA;
 }
 
-main .about .about-content .about-picture {
-    width: 100%;
-    height: 40%;
-    
-}
-
-main .about .about-content .about-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: 5px solid #E55606;
-}
-
-main .about .about-content .about-us {
-    width: 100%;
-    height: 100%;
-    padding: 40px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main .about .about-content .about-us h2 {
-    font-size: 1.5em;
-    padding-bottom: 20px;
-}
-
-main .about .about-content .about-us p {
-    font-size: 1em;
-    margin: 5px 0;
-    text-align: center;
-}
-
+/*
+***********************************************************************
+************************* NUMBER INFOS ********************************
+***********************************************************************
+*/
 main .about .number-infos {
     width: 100%;
     height: 150px;
-    margin: 0 auto;
-    margin: 50px 0;
+    margin-top: 50px;
     display: flex;
+    background-color: aquamarine;
 }
 
 main .about .number-infos .info {
@@ -208,124 +129,154 @@ main .about .number-infos .info {
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 1px dashed #E55606;
+    background-color: #FAFAFA;
+
 }
 
 main .about .number-infos .info .number {
     width: 100%;
-    height: 100px;
+    height: 70%;
+    font-size: 4em;
+    font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
-    font-weight: 900;
 }
 
 main .about .number-infos .info .text {
     width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
+    height: 30%;
+    font-size: 0.8em;
+    font-weight: 900;
+    text-align: center;
 }
 
-@media screen and (min-width: 768px) {}
-@media screen and (min-width: 1000px) {}
-
-@media screen and (min-width: 1500px) {
-    main .about .transition {
-        top: 66px;
-        font-size: 3.5em;
-    }
-    
-    main .about .about-container {
-        width: 70%;
-        height: 500px;
-        margin-top: 300px;
-    }
-    
-    main .about .about-content {
-        flex-direction: row;
-    }
-    
-    main .about .about-content .about-picture {
-        width: 40%;
-        height: 100%;
-        
-    }
-    
-    main .about .about-content .about-picture img {
-        border-bottom-left-radius: 5px;
-        border-top-right-radius: 0px;
-        border-bottom: 0px;
-        border-right: 5px solid #E55606;
-    }
-    
-    main .about .about-content .about-us {
-        width: 60%;
-        padding: 50px;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    
-    main .about .about-content .about-us h2 {
+@media screen and (min-width: 768px) {
+    main .about .top-transition h2 {
         font-size: 2.5em;
+        width: 415px;
+    }
+
+    /*
+    ***********************************************************************
+    ************************* NUMBER INFOS ********************************
+    ***********************************************************************
+    */
+    main .about .number-infos {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    main .about .number-infos .info .text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main .about .about-container {
+        width: 80%;
+        height: 400px;
+    }
+
+    /* about SLIDER */
+    main .about .about-container .about-slide {
+        width: 145%;
+        flex-direction: row;
+        transition: left 0.3s ease-in;
     }
     
-    main .about .about-content .about-us p {
-        font-size: 1.2em;
-        margin: 15px 0;
-        text-align: start;
+    main .about .about-container .about-slide.onSlide {
+        top: 0;
+        left: -45%;
+        transition: left 0.3s ease-in;
     }
-
-    main .about .brick-bottom {
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-    }
-
-    main .about .brick-bottom img {
-        width: 100%;
+    
+    /* about IMAGE */
+    main .about .about-container .about-slide .about-img {
+        width: 38%;
         height: 100%;
+        border-bottom: none;
+        border-right: 2px solid #E55606;
+    }
+
+    main .about .about-container .about-slide .about-img img {
+        height: 100%;
+        object-position: center;
         object-fit: cover;
     }
-
-    main .about .number-infos {
-        width: 60%;
-        height: 200px;
-        margin: 0 auto;
-        margin: 50px 0;
-        display: flex;
-    }
     
-    main .about .number-infos .info {
-        width: calc(100% / 3);
+    /* about CONTENT */
+    main .about .about-container .about-slide .about-content {
+        width: 84%;
         height: 100%;
         display: flex;
-        flex-direction: column;
-        border: 1px dashed #E55606;
     }
     
-    main .about .number-infos .info .number {
-        width: 100%;
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 6em;
-        font-weight: 900;
+    /* about CONTENT => TOP */
+    main .about .about-container .about-slide .about-content .top-content {
+        position: relative;
+        width: 61%;
+        height: 100%;
     }
     
+    main .about .about-container .about-slide .about-content .top-content h2 {
+        text-align: start;
+    }
+    
+    main .about .about-container .about-slide .about-content .top-content span {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 155px;
+    }
+    
+    /* about CONTENT => BOT */
+    main .about .about-container .about-slide .about-content .bot-content {
+        width: 50%;
+        height: 100%;
+    }
+
+    /*
+    ***********************************************************************
+    ************************* NUMBER INFOS ********************************
+    ***********************************************************************
+    */
+    main .about .number-infos {
+        width: 60%;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main .about .top-transition h2 {
+        bottom: 10px;
+        width: 500px;
+        font-size: 3em;
+    }
+
+    main .about .about-container {
+        width: 80%;
+        height: 500px;
+    }
+
+    main .about .about-container .about-slide .about-content .top-content p {
+        font-size: 1.2em;
+    }
+
+    /*
+    ***********************************************************************
+    ************************* NUMBER INFOS ********************************
+    ***********************************************************************
+    */
+    main .about .number-infos {
+        width: 60%;
+        margin-top: 100px;
+    }
+
     main .about .number-infos .info .text {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
-} */
+}

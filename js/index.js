@@ -43,17 +43,9 @@ function handleDisplayService(evt) {
     const left = document.querySelector('.left-card');
     const right = document.querySelector('.right-card');
 
-    function txtBtn(currentItem) 
-    {
-        if ( currentItem.innerText === 'En savoir plus ?') {
-            currentItem.innerHTML = '<strong>&larr; Retour</strong>';
-        }
-        else {
-            currentItem.innerHTML = '<strong>En savoir plus ?</strong>';
-        }
-    }
+    
     txtBtn(currentItem);
-    console.log('CURRENT', currentCard.classList.contains('onSlide') );
+    // console.log('CURRENT', currentCard.classList.contains('onSlide') );
 
     if ( currentCard.classList.contains('onSlide') || currentCard.classList.contains('downCard') ) {
         card1.classList.remove('onSlide', 'downCard', 'actived');
@@ -96,6 +88,16 @@ function handleDisplayService(evt) {
 
 }
 
+function txtBtn(currentItem) 
+{
+    if ( currentItem.innerText === 'En savoir plus ?') {
+        currentItem.innerHTML = '<strong>&larr; Retour</strong>';
+    }
+    else {
+        currentItem.innerHTML = '<strong>En savoir plus ?</strong>';
+    }
+}
+
  // add event to button about card
  const btnAbout = document.querySelector('.know-more');
  btnAbout.addEventListener('click', (evt) => {
@@ -110,7 +112,8 @@ function handleDisplayService(evt) {
     // console.log('CLICK ABOUT');
     evt.preventDefault();
 
-    const currentElmt = evt.currentTarget.parentNode;
+    txtBtn(btnAbout);
+
     const slideElement = document.querySelector('.about-slide');
     console.log('CURRENT ELEMENT', slideElement);
     if ( slideElement.classList.contains('onSlide') ) {
