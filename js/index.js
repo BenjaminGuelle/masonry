@@ -63,7 +63,7 @@ function handleDisplayService(evt) {
             card1.classList.add('actived');
             setTimeout( () => {
                 card1.classList.add('downCard');
-            }, 500);
+            }, 600);
 
             card2.classList.add('onSlide');
             card3.classList.add('onSlide');
@@ -73,7 +73,7 @@ function handleDisplayService(evt) {
             card2.classList.add('actived');
             setTimeout( () => {
                 card2.classList.add('downCard');
-            }, 500);
+            }, 600);
 
             card1.classList.add('onSlide');
             card3.classList.add('onSlide');
@@ -83,7 +83,7 @@ function handleDisplayService(evt) {
             card3.classList.add('actived');
             setTimeout( () => {
                 card3.classList.add('downCard');
-            }, 500);
+            }, 600);
 
             card1.classList.add('onSlide');
             card2.classList.add('onSlide');
