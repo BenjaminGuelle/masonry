@@ -1,8 +1,9 @@
 main .about {
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
+/* ******* Img background effect with H2 */
 main .about .top-transition {
     position: relative;
     z-index: 0;
@@ -20,12 +21,92 @@ main .about .top-transition h2 {
     transform: translateX(-50%);
     color: #E55606;
     width: 240px;
+    font-size: 1.4em;
 }
 
-@media screen and (min-width: 768px) {}
+/*
+******** CONTAINER ABOUT *************
+*/
+main .about .about-container {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: aquamarine;
+    overflow: hidden;
+}
+
+/* about SLIDER */
+main .about .about-container .about-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: top 0.3s ease-in;
+}
+
+main .about .about-container .about-slide.onSlide {
+    top: -40%;
+    transition: top 0.3s ease-in;
+}
+
+/* about IMAGE */
+main .about .about-container .about-slide .about-img {
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+}
+
+main .about .about-container .about-slide .about-img img {
+    width: 100%;
+}
+
+/* about CONTENT */
+main .about .about-container .about-slide .about-content {
+    width: 100%;
+    height: 60%;
+    background-color: aqua;
+}
+
+/* about CONTENT => TOP */
+main .about .about-container .about-slide .about-content .top-content {
+    width: 100%;
+    height: 360px;
+    background-color: red;
+}
+
+main .about .about-container .about-slide .about-content .top-content span {
+    color: white;
+    cursor: pointer;
+}
+
+/* about CONTENT => BOT */
+main .about .about-container .about-slide .about-content .bot-content {
+    width: 100%;
+    height: 300px;
+    background-color: blue;
+}
+
+@media screen and (min-width: 768px) {
+    main .about .top-transition h2 {
+        font-size: 2.5em;
+        width: 415px;
+    }
+}
+
 @media screen and (min-width: 1024px) {}
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+    main .about .top-transition h2 {
+        bottom: 10px;
+        width: 500px;
+        font-size: 3em;
+    }
+}
 /* main .about {
     position: relative;
     width: 100%;

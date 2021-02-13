@@ -26,6 +26,10 @@ for ( let i = 0; i < srvCard.length; i++) {
     });
 }
 
+/**
+ * 
+ * @param {*} evt display card service 
+ */
 function handleDisplayService(evt) {
     evt.preventDefault();
     const currentCard = evt.currentTarget.parentNode.parentNode;
@@ -91,3 +95,29 @@ function handleDisplayService(evt) {
     }
 
 }
+
+ // add event to button about card
+ const btnAbout = document.querySelector('.know-more');
+ btnAbout.addEventListener('click', (evt) => {
+    handleOpenAboutCard(evt), true;
+ });
+
+ /**
+ * 
+ * @param {*} evt display card about 
+ */
+ function handleOpenAboutCard(evt) {
+    // console.log('CLICK ABOUT');
+    evt.preventDefault();
+
+    const currentElmt = evt.currentTarget.parentNode;
+    const slideElement = document.querySelector('.about-slide');
+    console.log('CURRENT ELEMENT', slideElement);
+    if ( slideElement.classList.contains('onSlide') ) {
+        slideElement.classList.remove('onSlide');
+    }
+    else {
+        slideElement.classList.add('onSlide');
+    }
+
+ };
